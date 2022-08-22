@@ -1,7 +1,10 @@
 type Machine struct {
 }
 
-func Run() *Machine {
+func Instantiate() *Machine {
 	return &Machine{}
+}
+
+func (m *Machine) Run() {
 }
 

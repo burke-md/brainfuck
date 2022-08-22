@@ -10,7 +10,7 @@ An implementation of the Brain Fuck programming language. See
     - [ ] Handle output
     - [ ] Accepts code as string 
     - [ ] Has  instruction pointer for array (len 30000)
-    - [ ] Has context pointer (slot in array to be modified/read/written)
+    - [ ] Has data pointer (slot in memory to be modified/read/written)
 
 - [ ] Creat Run func:
     - [ ] Moves pointer
