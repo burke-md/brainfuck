@@ -12,7 +12,10 @@ An implementation of the Brain Fuck programming language. See
     - [x] Has  instruction pointer for array (len 30000)
     - [x] Has context pointer (slot in memory to be updated)
 
-- [ ] Creat Run func:
+- [x] Create Instantiate func:
+    - [x] Pass in code, reader, writer, and set buf
+
+- [ ] Create Run func:
     - [ ] Moves pointer
     - [ ] Switch statement to asses instruction at pointer
     - [ ] Special attention/helper funcs for:
