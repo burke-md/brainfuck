@@ -6,11 +6,11 @@ An implementation of the Brain Fuck programming language. See
 ### TODOS:
 
 - [ ] Create Machine:
-    - [ ] Handle input
-    - [ ] Handle output
-    - [ ] Accepts code as string 
-    - [ ] Has  instruction pointer for array (len 30000)
-    - [ ] Has data pointer (slot in memory to be modified/read/written)
+    - [x] Handle input
+    - [x] Handle output
+    - [x] Accepts code as string 
+    - [x] Has  instruction pointer for array (len 30000)
+    - [x] Has context pointer (slot in memory to be updated)
 
 - [ ] Creat Run func:
     - [ ] Moves pointer
