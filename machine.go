@@ -25,4 +25,20 @@ func Instantiate(code string, in io.Reader, out io.Writer) *Machine {
 }
 
 func (m *Machine) Run() {
+	for m.ip < len(m.code) { // Iterate through code string
+		instruction := m.code[m.ip]
+
+		switch instruction {
+		case '<':
+		case '>':
+		case '+':
+		case '-':
+		case '.':
+		case ',':
+		case '[':
+		case ']':
+		}
+
+		m.ip++ // Move instruction pointer forward
+	}
 }

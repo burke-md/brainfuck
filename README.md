@@ -16,7 +16,7 @@ An implementation of the Brain Fuck programming language. See
     - [x] Pass in code, reader, writer, and set buf
 
 - [ ] Create Run func:
-    - [ ] Moves pointer
+    - [x] Moves instruction pointer
     - [ ] Switch statement to asses instruction at pointer
     - [ ] Special attention/helper funcs for:
         - [ ] Read char
