@@ -42,3 +42,11 @@ func (m *Machine) Run() {
 		m.ip++ // Move instruction pointer forward
 	}
 }
+
+func (m *Machine) readByte() {
+
+}
+
+func (m *Machine) writeByte() {
+
+}
