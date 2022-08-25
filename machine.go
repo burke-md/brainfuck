@@ -34,19 +34,19 @@ func (m *Machine) Run() {
 		case '>':
 			m.cp++
 		case '+':
-			current := m.memory[cp]
+			current := m.memory[m.cp]
 			if current == 255 {
-				m.memory[cp] = 0
+				m.memory[m.cp] = 0
 				break
 			}
 			m.memory[m.cp]++
 		case '-':
 			current := m.memory[m.cp]
 			if current == 0 {
-				m.memory[cp] = 255
+				m.memory[m.cp] = 255
 				break
 			}
-			m.memory[cp]--
+			m.memory[m.cp]--
 		case '.':
 			m.writeByte()
 		case ',':
