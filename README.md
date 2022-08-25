@@ -19,7 +19,7 @@ An implementation of the Brain Fuck programming language. See
     - [x] Moves instruction pointer
     - [x] Switch statement to asses instruction at pointer
     - [ ] Special attention/helper funcs for:
-        - [ ] Read char
+        - [x] ReadByte
         - [ ] Write char
         - [ ] Loops
 
