@@ -18,10 +18,10 @@ An implementation of the Brain Fuck programming language. See
 - [ ] Create Run func:
     - [x] Moves instruction pointer
     - [x] Switch statement to asses instruction at pointer
-    - [ ] Special attention/helper funcs for:
+    - [x] Special attention/helper funcs for:
         - [x] ReadByte
-        - [ ] Write char
-        - [ ] Loops
+        - [X] WriteByte
+        - [x] Loops(not implemented as a seperate method at this time)
 
 - [ ] Create Main func that:
     - [ ] Reads Brain Fuck code in from file

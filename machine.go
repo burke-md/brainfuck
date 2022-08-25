@@ -89,5 +89,13 @@ func (m *Machine) readByte() {
 }
 
 func (m *Machine) writeByte() {
+	m.buf[0] = byte(m.memory[m.cp])
 
+	n, err := m.output.Write(m.buf)
+	if err != nil {
+		panic(err)
+	}
+	if n != 1 {
+		panic("Wrong number of bytes written.")
+	}
 }
