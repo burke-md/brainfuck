@@ -30,13 +30,47 @@ func (m *Machine) Run() {
 
 		switch instruction {
 		case '<':
+			m.cp--
 		case '>':
+			m.cp++
 		case '+':
+			m.memory[m.cp]++
 		case '-':
+			m.memory[m.cp]--
 		case '.':
+			m.writeByte()
 		case ',':
+			m.readByte()
 		case '[':
+			if m.memory[m.cp] == 0 {
+				// See lang spec.
+				// Continue execution if current cell(m.cp) has non zero value
+				depth := 1
+				for depth != 0 {
+					m.ip++
+					switch m.code[m.ip] {
+					case '[':
+						depth++ // Handle nested loops
+					case ']':
+						// Re-execute loop if current cell (m.cp)
+						// has non zero value
+						depth--
+					}
+				}
+			}
 		case ']':
+			if m.memory[m.cp] != 0 {
+				depth := 1
+				for depth != 0 {
+					m.ip--
+					switch m.code[m.cp] {
+					case ']':
+						depth++
+					case '[':
+						depth--
+					}
+				}
+			}
 		}
 
 		m.ip++ // Move instruction pointer forward
