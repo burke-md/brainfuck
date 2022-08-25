@@ -23,9 +23,9 @@ An implementation of the Brain Fuck programming language. See
         - [X] WriteByte
         - [x] Loops(not implemented as a seperate method at this time)
 
-- [ ] Create Main func that:
-    - [ ] Reads Brain Fuck code in from file
-    - [ ] Calls new instance of Machine
+- [x] Create Main func that:
+    - [x] Reads Brain Fuck code in from file
+    - [x] Calls new instance of Machine
 
 ### Beyond the basics
 
