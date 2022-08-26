@@ -1,3 +1,3 @@
-module github.com/burke-md/brainfuck
+module brainfuck
 
 go 1.18
