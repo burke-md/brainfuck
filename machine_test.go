@@ -6,11 +6,11 @@ import (
 )
 
 func TestDecrement(t *testing.T) {
-	m := Instantiate("+++---", new(bytes.Buffer), new(bytes.Buffer))
+	m := Instantiate("+++--", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
-	if m.memory[0] != 3 {
+	if m.memory[0] != 1 {
 		t.Errorf(
 			"\nMachine operation DECREMENT fail. Result: %d", m.memory[0])
 	}
@@ -21,7 +21,7 @@ func TestIncrement(t *testing.T) {
 
 	m.Run()
 
-	if m.memory[0] != 5 {
+	if m.memory[0] != 4 {
 		t.Errorf(
 			"\nMachine operation INCREMENT fail. Result: %d", m.memory[0])
 	}

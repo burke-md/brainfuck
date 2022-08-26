@@ -29,6 +29,8 @@ An implementation of the Brain Fuck programming language. See
 
 ### Beyond the basics
 
+- [ ] Write tests for basic coverage
+    
 - [ ] Create lexer with:
     - [ ] Struct for instruction w/ data for optimizing repeated operations
     - [ ] Similar struct w/ data for more efficient loops
