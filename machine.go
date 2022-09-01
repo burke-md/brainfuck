@@ -1,6 +1,9 @@
 package main
 
-import "io"
+import (
+	"fmt"
+	"io"
+)
 
 type Machine struct {
 	code string
@@ -15,7 +18,8 @@ type Machine struct {
 	buf []byte
 }
 
-func Instantiate(code string, in io.Reader, out io.Writer) *Machine {
+func InstantiateMachine(code string, in io.Reader, out io.Writer) *Machine {
+	fmt.Printf("New Machine instantiated..")
 	return &Machine{
 		code:   code,
 		input:  in,

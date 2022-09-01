@@ -15,7 +15,7 @@ func main() {
 		os.Exit(-1)
 	}
 	// Create new machine instance
-	m := Instantiate(string(code), os.Stdin, os.Stdout)
+	m := InstantiateMachine(string(code), os.Stdin, os.Stdout)
 	// Run/Start/Execute
 	m.Run()
 }

@@ -27,6 +27,8 @@ An implementation of the Brain Fuck programming language. See
     - [x] Reads Brain Fuck code in from file
     - [x] Calls new instance of Machine
 
+- [ ] Handle bug => `go build -o machine && ./machine ./hello_world.b` causes 
+terminal to hang
 ### Beyond the basics
 
 - [ ] Write tests for basic coverage
