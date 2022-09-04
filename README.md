@@ -55,3 +55,43 @@ This has been resolved.
 - [ ] Create lexer with:
     - [ ] Struct for instruction w/ data for optimizing repeated operations
     - [ ] Similar struct w/ data for more efficient loops
+
+## The compiler:
+
+Below is the working checklist to build a functioning brainfuck compiler.
+The end goal is to benchmark the interpreter and compiler (perhaps even an
+improved compiler) against the classic `mandelbrot.b` (a mandelbrot fractal 
+viewer) written by Erik Bosman.
+
+- [ ] main.go
+    - [ ] Accept CLI arg (brainfuck file location)
+    - [ ] Basic error handling
+    - [ ] Instantiate new instance of compiler
+    - [ ] Run/return output from compiler
+    - [ ] Instantiate new instance of bf machine
+    - [ ] Run/execute
+
+
+- [ ] machine.go
+    - [ ] Define Machine as struct
+    - [ ] Define `InstantiateMachine` func
+    - [ ] Extend `Machine` w/ `Run` method
+        - [ ] Iterate through new instruction list
+        - [ ] Switch/case w/ appropriate case for each instruction
+        - [ ] Read/Write helper functions
+
+- [ ] compiler.go
+    - [ ] Define `Compiler` struct 
+        - [ ] code, code length, position, instructions array
+    - [ ] Define `InstantiateCompiler` func
+    - [ ] Extend `Compiler` w/ `Run` method
+        - [ ] Iterate through code
+        - [ ] Switch/case
+            - [ ] Append instruction w/ arg for `[` / `]`
+            - [ ] Call helper to handle repetitive commands
+
+- [ ] instructions.go
+    - [ ] Define `InstructionType` as `byte`
+    - [ ] Define `Instruction` struct w/ `InstructionType` & `Arg`
+    - [ ] Map instruction names to `InstructionType` (all 8 chars)
+
