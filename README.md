@@ -3,9 +3,20 @@
 An implementation of the Brain Fuck programming language. See 
 [wikipedia](https://en.wikipedia.org/wiki/Brainfuck#P%E2%80%B2%E2%80%B2:_Brainfuck's_formal_%22parent_language%22) here.
 
+## The interpreter:
+
+Below is a check list I used while building the basic interpreter - in the 
+future things may evolve beyond its current state.
+
+To build and run: 
+
+- Navigate inside the interpreter dir
+- Run command to build ` go build -o machine`
+- Run command to see output in terminal ` ./machine ../sample_bf/hello_world.b`
+
 ### TODOS:
 
-- [ ] Create Machine:
+- [x] Create Machine:
     - [x] Handle input
     - [x] Handle output
     - [x] Accepts code as string 
@@ -37,7 +48,9 @@ This has been resolved.
 
 ### Beyond the basics
 
-- [ ] Write tests for basic coverage
+- [ ] Tests
+    - [x] Define tests for each basic command
+    - [ ] Implement tests as defined
     
 - [ ] Create lexer with:
     - [ ] Struct for instruction w/ data for optimizing repeated operations
