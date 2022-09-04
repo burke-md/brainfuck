@@ -19,7 +19,7 @@ type Machine struct {
 }
 
 func InstantiateMachine(code string, in io.Reader, out io.Writer) *Machine {
-	fmt.Printf("New Machine instantiated..")
+	fmt.Printf("New Machine instantiated...\n")
 	return &Machine{
 		code:   code,
 		input:  in,
@@ -77,7 +77,7 @@ func (m *Machine) Run() {
 				depth := 1
 				for depth != 0 {
 					m.ip--
-					switch m.code[m.cp] {
+					switch m.code[m.ip] {
 					case ']':
 						depth++
 					case '[':
