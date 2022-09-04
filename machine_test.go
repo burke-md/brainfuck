@@ -6,7 +6,7 @@ import (
 )
 
 func TestDecrement(t *testing.T) {
-	m := Instantiate("+++--", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("+++--", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
@@ -17,7 +17,7 @@ func TestDecrement(t *testing.T) {
 }
 
 func TestIncrement(t *testing.T) {
-	m := Instantiate("++++", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("++++", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
@@ -28,7 +28,7 @@ func TestIncrement(t *testing.T) {
 }
 
 func TestContextPointerDecrement(t *testing.T) {
-	m := Instantiate("", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
@@ -39,7 +39,7 @@ func TestContextPointerDecrement(t *testing.T) {
 }
 
 func TestContextPointerIncrement(t *testing.T) {
-	m := Instantiate("", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
@@ -50,7 +50,7 @@ func TestContextPointerIncrement(t *testing.T) {
 }
 
 func TestReadByte(t *testing.T) {
-	m := Instantiate("", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
@@ -61,7 +61,7 @@ func TestReadByte(t *testing.T) {
 }
 
 func TestWriteByte(t *testing.T) {
-	m := Instantiate("", new(bytes.Buffer), new(bytes.Buffer))
+	m := InstantiateMachine("", new(bytes.Buffer), new(bytes.Buffer))
 
 	m.Run()
 
