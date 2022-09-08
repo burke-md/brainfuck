@@ -64,12 +64,12 @@ improved compiler) against the classic `mandelbrot.b` (a mandelbrot fractal
 viewer) written by Erik Bosman.
 
 - [ ] main.go
-    - [ ] Accept CLI arg (brainfuck file location)
-    - [ ] Basic error handling
-    - [ ] Instantiate new instance of compiler
-    - [ ] Run/return output from compiler
-    - [ ] Instantiate new instance of bf machine
-    - [ ] Run/execute
+    - [x] Accept arg (brainfuck file location)
+    - [x] Basic error handling
+    - [x] Instantiate new instance of compiler
+    - [x] Run/return output from compiler
+    - [x] Instantiate new instance of bf machine
+    - [x] Run/execute
 
 
 - [ ] machine.go
