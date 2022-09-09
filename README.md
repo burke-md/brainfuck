@@ -91,7 +91,7 @@ viewer) written by Erik Bosman.
             - [ ] Call helper to handle repetitive commands
 
 - [ ] instructions.go
-    - [ ] Define `InstructionType` as `byte`
-    - [ ] Define `Instruction` struct w/ `InstructionType` & `Arg`
-    - [ ] Map instruction names to `InstructionType` (all 8 chars)
+    - [x] Define `InstructionType` as `byte`
+    - [x] Define `Instruction` struct w/ `InstructionType` & `Arg`
+    - [x] Map instruction names to `InstructionType` (all 8 chars)
 
