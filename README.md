@@ -80,17 +80,17 @@ viewer) written by Erik Bosman.
         - [ ] Switch/case w/ appropriate case for each instruction
         - [ ] Read/Write helper functions
 
-- [ ] compiler.go
-    - [ ] Define `Compiler` struct 
-        - [ ] code, code length, position, instructions array
-    - [ ] Define `InstantiateCompiler` func
-    - [ ] Extend `Compiler` w/ `Run` method
-        - [ ] Iterate through code
-        - [ ] Switch/case
-            - [ ] Append instruction w/ arg for `[` / `]`
-            - [ ] Call helper to handle repetitive commands
+- [x] compiler.go
+    - [x] Define `Compiler` struct 
+        - [x] code, code length, position, instructions array
+    - [x] Define `InstantiateCompiler` func
+    - [x] Extend `Compiler` w/ `Run` method
+        - [x] Iterate through code
+        - [x] Switch/case
+            - [x] Append instruction w/ arg for `[` / `]`
+            - [x] Call helper to handle repetitive commands
 
-- [ ] instructions.go
+- [x] instructions.go
     - [x] Define `InstructionType` as `byte`
     - [x] Define `Instruction` struct w/ `InstructionType` & `Arg`
     - [x] Map instruction names to `InstructionType` (all 8 chars)
