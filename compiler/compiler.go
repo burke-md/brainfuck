@@ -8,7 +8,7 @@ type Compiler struct {
 	instructions []*Instruction
 }
 
-func InstantiateCompiler(code tring) *Compiler {
+func InstantiateCompiler(code string) *Compiler {
 	return &Compiler{
 		code:         code,
 		codeLength:   len(code),
@@ -35,11 +35,17 @@ func (c *Compiler) Run() []*Instruction {
 			c.instructions[openInstruction].Argument = closeInstructionPos
 
 		case '+':
+			c.CompileFoldableInstruction('+', Plus)
 		case '-':
+			c.CompileFoldableInstruction('-', Minus)
 		case '<':
+			c.CompileFoldableInstruction('<', Left)
 		case '>':
+			c.CompileFoldableInstruction('>', Right)
 		case '.':
+			c.CompileFoldableInstruction('.', WriteChar)
 		case ',':
+			c.CompileFoldableInstruction(',', ReadChar)
 		}
 
 		c.position++
