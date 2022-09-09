@@ -15,5 +15,5 @@ const (
 
 type Instruction struct {
 	Type     InstructionType
-	Arugment int
+	Argument int
 }
