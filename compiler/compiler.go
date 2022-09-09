@@ -24,7 +24,16 @@ func (c *Compiler) Run() []*Instruction {
 
 		switch current {
 		case '[':
+			insPos := c.EmitWithArg(JumpIfZero, 0)
+			loopStack = append(loopStack, insPos)
 		case ']':
+			// Pop last open bracket off stack
+			openInstruction := loopStack[len(loopStack)-1]
+			loopStack = loopStack[:len(loopStack)-1]
+
+			closeInstructionPos := c.EmitWithArg(JumpIfNonZero, openInstruction)
+			c.instructions[openInstruction].Argument = closeInstructionPos
+
 		case '+':
 		case '-':
 		case '<':
