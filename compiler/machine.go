@@ -26,3 +26,22 @@ func InstantiateMachine(
 		readBuf: make([]byte, 1),
 	}
 }
+
+func (m *Machine) Run() {
+	for m.ip < len(m.code) {
+		instruction := m.code[m.ip]
+
+		switch instruction.Type {
+		case Plus:
+		case Minus:
+		case Right:
+		case Left:
+		case WriteChar:
+		case ReadChar:
+		case JumpIfZero:
+		case JumpIfNonZero:
+		}
+
+		m.ip++
+	}
+}
