@@ -73,12 +73,12 @@ viewer) written by Erik Bosman.
 
 
 - [ ] machine.go
-    - [ ] Define Machine as struct
-    - [ ] Define `InstantiateMachine` func
+    - [x] Define Machine as struct
+    - [x] Define `InstantiateMachine` func
     - [ ] Extend `Machine` w/ `Run` method
-        - [ ] Iterate through new instruction list
+        - [x] Iterate through new instruction list
         - [ ] Switch/case w/ appropriate case for each instruction
-        - [ ] Read/Write helper functions
+        - [x] Read/Write helper functions
 
 - [x] compiler.go
     - [x] Define `Compiler` struct 

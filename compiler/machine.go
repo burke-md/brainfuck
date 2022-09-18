@@ -45,3 +45,27 @@ func (m *Machine) Run() {
 		m.ip++
 	}
 }
+
+func (m *Machine) readChar() {
+	n, err := m.input.Read(m.readBuf)
+	if err != nil {
+		panic(err)
+	}
+	if n != 1 {
+		panic("Wrong number of bytes read")
+	}
+
+	m.memory[m.cp] = int(m.readBuf[0])
+}
+
+func (m *Machine) writeChar() {
+	m.readBuf[0] = byte(m.memory[m.cp])
+
+	n, err := m.output.Write(m.readBuf)
+	if err != nil {
+		panic(err)
+	}
+	if n != 1 {
+		panic("Wrong number of bytes written")
+	}
+}
