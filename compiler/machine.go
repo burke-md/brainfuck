@@ -55,7 +55,13 @@ func (m *Machine) Run() {
 				m.readChar()
 			}
 		case JumpIfZero:
+			if m.memory[m.cp] == 0 {
+				m.ip = inst.Argument
+			}
 		case JumpIfNonZero:
+			if m.memory[m.cp] != 0 {
+				m.ip = inst.Argument
+			}
 		}
 
 		m.ip++
