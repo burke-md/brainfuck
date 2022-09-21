@@ -52,9 +52,9 @@ This has been resolved.
     - [x] Define tests for each basic command
     - [ ] Implement tests as defined
     
-- [ ] Create lexer with:
-    - [ ] Struct for instruction w/ data for optimizing repeated operations
-    - [ ] Similar struct w/ data for more efficient loops
+- [x] Create lexer with:
+    - [x] Struct for instruction w/ data for optimizing repeated operations
+    - [x] Similar struct w/ data for more efficient loops
 
 ## The compiler:
 
@@ -75,9 +75,9 @@ viewer) written by Erik Bosman.
 - [ ] machine.go
     - [x] Define Machine as struct
     - [x] Define `InstantiateMachine` func
-    - [ ] Extend `Machine` w/ `Run` method
+    - [x] Extend `Machine` w/ `Run` method
         - [x] Iterate through new instruction list
-        - [ ] Switch/case w/ appropriate case for each instruction
+        - [x] Switch/case w/ appropriate case for each instruction
         - [x] Read/Write helper functions
 
 - [x] compiler.go
