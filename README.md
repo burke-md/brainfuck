@@ -1,14 +1,14 @@
 # Brain Fuck
 
-## The results:
+### The results:
 
-Using the mandlebrot visualization (Implemented by (Erik)[ https://github.com/erikdubbelboer] )
+Using the mandlebrot visualization (Implemented by [Erik](https://github.com/erikdubbelboer) )
 as the bench mark:
 
-The interpreter with no optimization: 71.31s
+The interpreter with no optimization: `71.31s`
 
 The compiler with instructions to reduce duplicate commands and searching for
-corrosponding brackets: 13.17s
+corrosponding brackets: `13.17s`
 
 
 This can be run locally by cloning this repo and running the following command
