@@ -29,13 +29,23 @@ func InstantiateMachine(
 
 func (m *Machine) Run() {
 	for m.ip < len(m.code) {
-		instruction := m.code[m.ip]
+		inst := m.code[m.ip]
 
-		switch instruction.Type {
+		switch inst.Type {
 		case Plus:
+			m.memory[m.cp] += inst.Argument
+			if m.memory[m.cp] == 256 {
+				m.memory[m.cp] = 0 // underflow
+			}
 		case Minus:
+			m.memory[m.cp] -= inst.Argument
+			if m.memory[m.cp] == -1 {
+				m.memory[m.cp] = 255 // overflow
+			}
 		case Right:
+			m.cp += inst.Argument
 		case Left:
+			m.cp -= inst.Argument
 		case WriteChar:
 		case ReadChar:
 		case JumpIfZero:
