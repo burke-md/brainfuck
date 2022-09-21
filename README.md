@@ -10,6 +10,10 @@ The interpreter with no optimization: `71.31s`
 The compiler with instructions to reduce duplicate commands and searching for
 corrosponding brackets: `13.17s`
 
+![Screen Shot 2022-09-21 at 4 33 16 PM](https://user-images.githubusercontent.com/22263098/191605032-354a602e-1403-4be7-9af2-e70cbe70fd2a.png)
+
+
+### Instructions to run tests:
 
 This can be run locally by cloning this repo and running the following command
 to build, run and time the execution in either the interpreter and or the compiler
