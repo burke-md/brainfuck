@@ -1,5 +1,21 @@
 # Brain Fuck
 
+## The results:
+
+Using the mandlebrot visualization (Implemented by (Erik)[ https://github.com/erikdubbelboer] )
+as the bench mark:
+
+The interpreter with no optimization: 71.31s
+
+The compiler with instructions to reduce duplicate commands and searching for
+corrosponding brackets: 13.17s
+
+
+This can be run locally by cloning this repo and running the following command
+to build, run and time the execution in either the interpreter and or the compiler
+directory :
+`go build -o machine && time ./machine ../sample_bf/mandelbrot.b`
+
 An implementation of the Brain Fuck programming language. See 
 [wikipedia](https://en.wikipedia.org/wiki/Brainfuck#P%E2%80%B2%E2%80%B2:_Brainfuck's_formal_%22parent_language%22) here.
 
