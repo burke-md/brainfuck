@@ -47,7 +47,13 @@ func (m *Machine) Run() {
 		case Left:
 			m.cp -= inst.Argument
 		case WriteChar:
+			for i := 0; i < inst.Argument; i++ {
+				m.writeChar()
+			}
 		case ReadChar:
+			for i := 0; i < inst.Argument; i++ {
+				m.readChar()
+			}
 		case JumpIfZero:
 		case JumpIfNonZero:
 		}
